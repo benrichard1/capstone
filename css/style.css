@@ -17,29 +17,44 @@ body {
   font-size: 16px;
 }
 h1 {
-  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 h2 {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 700;
   padding-bottom: 16px;
+  padding-top: 32px;
 }
 h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5em;
     font-weight: 700;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
 }
 h4 {
-    font-size: 16px;
     padding-bottom: 8px;
     text-transform: uppercase;
 }
 p {
-  line-height: 24px;
+  line-height: 1.5rem;
   padding-bottom: 8px;
 }
 a {
 
+}
+.btn {
+  background-color: darkgray;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 16px;
+}
+.primary-link {
+  text-decoration: none;
+  color: skyblue;
 }
 
 
@@ -107,8 +122,69 @@ main {
 }
 #banner {
   background-color: lightgrey;
-  padding: 32px 24px;
   margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#banner img {
+  max-width: 100%;
+}
+#banner h3 {
+  padding-bottom: 48px;
+}
+.banner-image {
+  flex-grow: 2;
+  flex-basis: 50%;
+  padding: 32px 24px;
+}
+.banner-content {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 35%;
+  align-items: center;
+}
+.banner-block {
+  padding: 24px;
+}
+
+/* --------------------------------
+5. On Campus
+-------------------------------- */
+#oncampus {
+  display: flex;
+  flex-wrap: wrap;
+}
+#oncampus img {
+  width: 100%;
+}
+.feature-image {
+  flex-grow: 2;
+  flex-basis: 50%;
+  padding: 32px 24px;
+}
+.feature-content {
+  flex-grow: 1;
+  flex-basis: 35%;
+  border-left: 1px solid gray;
+}
+.feature-content .block {
+  display: flex;
+  padding: 24px;
+}
+#oncampus .block:last-child {
+  background-color: gray;
+}
+#oncampus .block:first-child {
+  border-bottom: 1px solid gray;
+}
+.block .image {
+  flex-grow: 1;
+  flex-basis: 30%;
+}
+.block .content {
+  flex-grow: 1;
+  flex-basis: 65%;
+  margin-left: 16px;
 }
 
 /* --------------------------------
@@ -118,7 +194,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 32px 72px;
+  padding: 0px 72px 32px 72px;
   background-color: lightgray;
 }
 #online h2 {
@@ -126,7 +202,7 @@ main {
   flex-basis: 100%;
   text-align: center;
 }
-.block {
+#online .block {
   flex-grow: 1;
   flex-basis: 30%;
   background-color: white;
@@ -137,6 +213,30 @@ main {
 }
 .block-content {
   padding: 16px;
+}
+
+/* --------------------------------
+6. Companies
+-------------------------------- */
+
+#for-companies {
+  display: flex;
+  flex-wrap: wrap;
+}
+#for-companies img {
+  width: 100%;
+}
+#for-companies .block:first-child {
+  background-color: gray;
+}
+#for-companies h2 {
+  flex-grow: 3;
+  flex-basis: 100%;
+  text-align: center;
+}
+video {
+  width: 100%;
+  margin:
 }
 
 /* --------------------------------
