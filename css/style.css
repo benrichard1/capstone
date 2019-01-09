@@ -13,8 +13,9 @@
 -------------------------------- */
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: #4A4A4A;
 }
 h1 {
   font-size: 3rem;
@@ -29,34 +30,49 @@ h2 {
   padding-top: 32px;
 }
 h3 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
-    font-weight: 700;
-    padding-bottom: 8px;
-}
-h4 {
-    padding-bottom: 8px;
-    text-transform: uppercase;
-}
-p {
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  font-weight: 600;
   padding-bottom: 8px;
 }
-a {
-
+h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  padding-bottom: 8px;
+  color: #9B9B9B;
 }
 .btn {
-  background-color: darkgray;
+  display: block;
+  background-color: #4A4A4A;;
   color: white;
-  font-size: 18px;
+  font-size: 1.25rem;
   text-decoration: none;
+  text-align: center;
+  width: 60%;
   padding: 16px;
+  margin-bottom: 32px;
 }
 .primary-link {
+  font-size: 1rem;
   text-decoration: none;
   color: skyblue;
 }
 
+/* --------------------------------
+2. Common
+-------------------------------- */
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* --------------------------------
 2. Header
@@ -82,7 +98,12 @@ header img {
 header span {
   margin-left: 8px;
   font-size: 22px;
+  font-weight: 700;
   text-transform: uppercase;
+}
+.alt {
+  font-weight: 400;
+  color: #9B9B9B;
 }
 
 /* --------------------------------
@@ -123,19 +144,12 @@ main {
 #banner {
   background-color: lightgrey;
   margin-top: 64px;
-  display: flex;
-  flex-wrap: wrap;
 }
 #banner img {
   max-width: 100%;
 }
 #banner h3 {
   padding-bottom: 48px;
-}
-.banner-image {
-  flex-grow: 2;
-  flex-basis: 50%;
-  padding: 32px 24px;
 }
 .banner-content {
   display: flex;
@@ -150,39 +164,37 @@ main {
 /* --------------------------------
 5. On Campus
 -------------------------------- */
-#oncampus {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 #oncampus img {
   width: 100%;
 }
 .feature-image {
-  flex-grow: 2;
+  flex-grow: 1;
   flex-basis: 50%;
   padding: 32px 24px;
 }
 .feature-content {
   flex-grow: 1;
   flex-basis: 35%;
-  border-left: 1px solid gray;
+  border-left: 2px solid #EEEEEE;
 }
 .feature-content .block {
   display: flex;
+  align-items: center;
   padding: 24px;
 }
 #oncampus .block:last-child {
-  background-color: gray;
+  background-color: #EEEEEE;
 }
 #oncampus .block:first-child {
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid #EEEEEE;
 }
 .block .image {
   flex-grow: 1;
   flex-basis: 30%;
 }
 .block .content {
-  flex-grow: 1;
+  flex-grow: 2;
   flex-basis: 65%;
   margin-left: 16px;
 }
@@ -191,24 +203,22 @@ main {
 5. Online
 -------------------------------- */
 #online {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   padding: 0px 72px 32px 72px;
-  background-color: lightgray;
+  background-color: #EEEEEE;
 }
 #online h2 {
   flex-grow: 3;
   flex-basis: 100%;
   text-align: center;
 }
-#online .block {
+.grid-block {
   flex-grow: 1;
   flex-basis: 30%;
   background-color: white;
   margin: 16px;
 }
-.block img {
+.grid-block img {
   width: 100%;
 }
 .block-content {
@@ -219,32 +229,51 @@ main {
 6. Companies
 -------------------------------- */
 
-#for-companies {
-  display: flex;
-  flex-wrap: wrap;
-}
 #for-companies img {
   width: 100%;
 }
 #for-companies .block:first-child {
-  background-color: gray;
+  background-color: #EEEEEE;
 }
 #for-companies h2 {
   flex-grow: 3;
   flex-basis: 100%;
   text-align: center;
 }
+#for-companies .feature-content {
+  border: none;
+  margin-top: 32px;
+}
+.feature-image h3 {
+  margin-top: 24px;
+}
 video {
   width: 100%;
-  margin:
 }
+
 
 /* --------------------------------
 6. Footer
 -------------------------------- */
 
 footer {
-
+  display: flex;
+  background-color: #fff;
+  height: 100px;
+  width: 100%;
+  border-top: 2px solid #EEEEEE;
+  padding-top: 32px
+}
+footer span {
+  flex-grow: 1;
+  margin-left: 24px;
+}
+footer ul {
+  margin-right: 8px;
+}
+footer li {
+  display: inline-block;
+  padding: 0 16px;
 }
 
 /* --------------------------------
@@ -253,27 +282,69 @@ footer {
 
 /* Mobile */
 @media only screen and (max-width: 640px) {
-  #online {
-    padding: 32px 0px;
-  }
-  .block {
+
+  .grid-block {
     flex-basis: 100%;
     margin: 8px 16px;
     background-color: grey;
   }
-  .block img {
+  .grid-block img {
     display: none;
   }
-  .block p, h4 {
+  .grid-block p, h4 {
     display: none;
   }
-  h3 {
-      padding-bottom: 0px;
+  #for-companies .feature-content, #for-companies h3, #for-companies p {
+    display: none;
+  }
+  .feature-content .block {
+    flex-wrap: wrap;
+  }
+  .block .image {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+  .image img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .content h3 {
+    margin-top: 16px;
+  }
+  .feature-content {
+    border-left: none;
+  }
+  #for-companies .block:first-child, #oncampus .block:last-child {
+    background-color: white;
+  }
+  #oncampus .block:first-child {
+    border-bottom: none;
   }
 }
 
 /* Mobile Lanscape */
 @media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    padding-bottom: 0px;
+  }
+  h4, p {
+    font-size: 0.75rem;
+  }
+  .btn {
+    font-size: 0.75rem;
+    width: 90%;
+  }
+  .primary-link {
+    font-size: 1rem;
+  }
   header img {
     height: 36px;
   }
@@ -283,9 +354,19 @@ footer {
   .nav-icons ul {
     display: flex;
   }
-  .block {
+  #online {
+    padding: 0 0 32px 0;
+    border-top: 2px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    background-color: white;
+  }
+  .grid-block {
     flex-grow: 1;
     flex-basis: 45%;
+  }
+  .feature-image {
+    flex-grow: 1;
+    flex-basis: 100%;
   }
 }
 
