@@ -57,12 +57,12 @@ p {
   text-align: center;
   width: 60%;
   padding: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 .primary-link {
   font-size: 1rem;
   text-decoration: none;
-  color: skyblue;
+  color: #34B5EE;
 }
 
 /* --------------------------------
@@ -149,7 +149,7 @@ main {
   max-width: 100%;
 }
 #banner h3 {
-  padding-bottom: 48px;
+  padding-bottom: 24px;
 }
 .banner-content {
   display: flex;
@@ -176,7 +176,7 @@ main {
 .feature-content {
   flex-grow: 1;
   flex-basis: 35%;
-  border-left: 2px solid #EEEEEE;
+  border-left: 1px solid #CCCCCC;
 }
 .feature-content .block {
   display: flex;
@@ -184,10 +184,10 @@ main {
   padding: 24px;
 }
 #oncampus .block:last-child {
-  background-color: #EEEEEE;
+  background-color: #CCCCCC;
 }
 #oncampus .block:first-child {
-  border-bottom: 2px solid #EEEEEE;
+  border-bottom: 1px solid #CCCCCC;
 }
 .block .image {
   flex-grow: 1;
@@ -205,7 +205,7 @@ main {
 #online {
   justify-content: center;
   padding: 0px 72px 32px 72px;
-  background-color: #EEEEEE;
+  background-color: #CCCCCC;
 }
 #online h2 {
   flex-grow: 3;
@@ -233,7 +233,7 @@ main {
   width: 100%;
 }
 #for-companies .block:first-child {
-  background-color: #EEEEEE;
+  background-color: #CCCCCC;
 }
 #for-companies h2 {
   flex-grow: 3;
@@ -259,17 +259,16 @@ video {
 footer {
   display: flex;
   background-color: #fff;
-  height: 100px;
   width: 100%;
-  border-top: 2px solid #EEEEEE;
-  padding-top: 32px
+  border-top: 1px solid #CCCCCC;
+  padding-bottom: 64px;
 }
 footer span {
   flex-grow: 1;
-  margin-left: 24px;
+  margin: 16px 0 0 24px;
 }
 footer ul {
-  margin-right: 8px;
+  margin: 16px 8px 0 0;
 }
 footer li {
   display: inline-block;
@@ -286,7 +285,7 @@ footer li {
   .grid-block {
     flex-basis: 100%;
     margin: 8px 16px;
-    background-color: grey;
+    background-color: #CCCCCC;
   }
   .grid-block img {
     display: none;
@@ -294,7 +293,7 @@ footer li {
   .grid-block p, h4 {
     display: none;
   }
-  #for-companies .feature-content, #for-companies h3, #for-companies p {
+  #oncampus .feature-image, #for-companies .feature-content, #for-companies h3, #for-companies p {
     display: none;
   }
   .feature-content .block {
@@ -305,7 +304,7 @@ footer li {
     flex-basis: 100%;
   }
   .image img {
-    height: 200px;
+    height: 175px;
     object-fit: cover;
   }
   .content h3 {
@@ -326,24 +325,18 @@ footer li {
 @media only screen and (max-width: 768px) {
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-bottom: 0px;
   }
-  h4, p {
-    font-size: 0.75rem;
-  }
   .btn {
-    font-size: 0.75rem;
-    width: 90%;
-  }
-  .primary-link {
     font-size: 1rem;
+    width: 90%;
   }
   header img {
     height: 36px;
@@ -356,8 +349,8 @@ footer li {
   }
   #online {
     padding: 0 0 32px 0;
-    border-top: 2px solid #EEEEEE;
-    border-bottom: 2px solid #EEEEEE;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     background-color: white;
   }
   .grid-block {
@@ -367,6 +360,17 @@ footer li {
   .feature-image {
     flex-grow: 1;
     flex-basis: 100%;
+    padding: 0;
+  }
+  #for-companies h2 {
+    padding-bottom: 32px;
+  }
+  footer {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  footer ul {
+    display: none;
   }
 }
 
