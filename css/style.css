@@ -50,7 +50,7 @@ p {
 }
 .btn {
   display: block;
-  background-color: #4A4A4A;;
+  background-color: #4A4A4A;
   color: white;
   font-size: 1.25rem;
   text-decoration: none;
@@ -59,10 +59,20 @@ p {
   padding: 16px;
   margin-bottom: 8px;
 }
+.btn:hover {
+  background-color: #333333;
+}
+.btn:focus {
+  background-color: #333333;
+}
 .primary-link {
   font-size: 1rem;
   text-decoration: none;
   color: #34B5EE;
+}
+a {
+  text-decoration: none;
+  color: #4A4A4A;
 }
 
 /* --------------------------------
